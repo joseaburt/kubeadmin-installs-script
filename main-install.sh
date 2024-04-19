@@ -27,6 +27,13 @@ sudo service docker start
 
 sudo chkconfig docker on
 
+sudo usermod -a -G docker $(whoami)
+
+newgrp docker
+
+sudo systemctl restart docker
+
+
 echo "==============================="
 echo "DOCKER VERSION: "
 echo "==============================="
